@@ -56,7 +56,6 @@
   --clr-primary-pale-red: hsl(357, 100%, 86%);
   /* Neutral Colors */
   --clr-neutral-dark-blue: hsl(212, 24%, 26%);
-  --clr-neutral-grayish-blue: hsl(211, 10%, 45%);
   --clr-neutral-light-gray: hsl(223, 19%, 93%);
   --clr-neutral-very-light-gray: hsl(228, 33%, 97%);
   --clr-neutral-white: hsl(0, 0%, 100%);
@@ -67,7 +66,66 @@
   font-family: Rubik;
 }
 
-.App {
-  font-family: sans-serif;
-  text-align: center;
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background: var(--clr-neutral-very-light-gray);
+}
+
+.container {
+  max-width: 768px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+/* AddComment Styling */
+.add-comment-box {
+  display: flex;
+  background: var(--clr-neutral-white);
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.dp {
+  width: 30px;
+}
+
+input[type="textarea"] {
+  width: 300px;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+input::placeholder {
+  color: var(--clr-neutral-dark-blue);
+  font-weight: 400;
+  padding-left: 5px;
+  padding-top: 5px;
+  /* position: absolute;
+  top: 10px;
+  left: 5%; */
+}
+
+input:focus,
+input {
+  border: none;
+  outline: 0.5px solid var(--clr-neutral-light-gray);
+}
+
+.btn-send {
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: var(--clr-primary-moderate-blue);
+  color: var(--clr-neutral-white);
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  border: none;
 }

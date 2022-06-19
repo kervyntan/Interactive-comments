@@ -1,10 +1,14 @@
 import "./assets/styles.css";
+import React, { useState } from "react";
+import AddComment from "./components/AddComment";
+import Card from "./shared/Card";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <Card>
+      <div className="container">
+        <AddComment />
+      </div>
+    </Card>
   );
 }
