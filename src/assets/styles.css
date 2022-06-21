@@ -145,6 +145,7 @@ input {
   background: var(--clr-neutral-white);
   gap: 20px;
   padding: 20px;
+  border-radius: 7.5px;
 }
 
 /* allows the comment-item-content to take the full width of the flex */

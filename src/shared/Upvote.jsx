@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const Upvote = () => {
-  const [upvote, setUpvote] = useState(5);
+const Upvote = (props) => {
+  const [upvote, setUpvote] = useState(props.score);
 
   const increaseUpvote = () => {
     let current = upvote;

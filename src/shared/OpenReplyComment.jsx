@@ -1,22 +1,21 @@
-import React, { useState, useRef } from "react";
-import img from "../shared/image-juliusomo.png";
+import React, { useState } from "react";
+import AddComment from "../components/AddComment";
+import img from "./image-juliusomo.png";
 import Button from "../shared/Button";
 
-const AddComment = () => {
-  const [textarea, setTextarea] = useState("");
+const OpenReplyComment = (props) => {
+  const [replytextarea, setReplyTextarea] = useState("");
   // const comment = useRef("");
 
-  const addCommentHandler = () => {
+  const replyCommentHandler = () => {
     console.log("clicked");
-    window.alert("You've submitted the following comment : " + textarea);
-    setTextarea("");
+    window.alert("You've replied to the above comment : " + replytextarea);
+    setReplyTextarea("");
   };
 
   const onTypeHandler = (e) => {
-    setTextarea(e.target.value);
+    setReplyTextarea(e.target.value);
   };
-
-  // console.log(comment);
   return (
     <div className="container">
       <div className="add-comment-box">
@@ -29,7 +28,7 @@ const AddComment = () => {
             <input
               type="textarea"
               placeholder="Add a comment..."
-              value={textarea}
+              value={replytextarea}
               onChange={onTypeHandler}
             />
           </form>
@@ -37,7 +36,7 @@ const AddComment = () => {
         <div className="add-comment-box-button">
           <Button
             className="btn btn-send"
-            onClickHandler={addCommentHandler}
+            onClickHandler={replyCommentHandler}
             type="submit"
             text="SEND"
           />
@@ -47,4 +46,4 @@ const AddComment = () => {
   );
 };
 
-export default AddComment;
+export default OpenReplyComment;
